@@ -1,0 +1,203 @@
+#grupo {
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px auto 0 490px;
+}
+
+#slogan {
+    font-size: 13px;
+    margin: 0 0 0 610px;
+    letter-spacing: 6px;
+    font-weight: 100;
+    font-family: sans-serif;
+}
+
+#centro {
+    display: block;
+    margin: 50px auto 0 auto;
+    width: 53%;
+    height: 460px;
+    background-color: #4551A4;
+    border-radius: 30px;
+    font-family: sans-serif;
+}
+
+#logo {
+    width: 100px;
+    border-radius: 100px;
+    margin: 20px 0 0 290px;
+}
+
+#card {
+    display: flex;
+    align-items: center;
+}
+
+#nome {
+    margin: 10px 0 0 45px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#nome2{
+    margin: 10px 0 0 40px;
+    width: 75%;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
+
+
+#card2 {
+    display: flex;
+    align-items: center;
+}
+
+#nas {
+    margin: 10px 0 0 45px;
+    font-size: 8px;
+    color: #ffffff;
+    padding: 0;
+}
+
+#data {
+    margin: 10px 0 0 20px;
+    width: 20%;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+    font-family: sans-serif;
+}
+
+#cpf {
+    margin: 10px 0 0 50px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#cp {
+    margin: 10px 0 0 20px;
+    width: 42%;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+    font-family: sans-serif;
+}
+
+#card3 {
+    display: flex;
+    align-items: center;
+}
+
+#email {
+    margin: 10px 0 0 45px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0 15px 0 0;
+}
+
+#em {
+    margin: 10px 0 0 20px;
+    width: 75%;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+    font-family: sans-serif;
+}
+
+#card4 {
+    display: flex;
+    align-items: center;
+}
+
+#senha {
+    margin: 10px 0 0 45px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0 15px 0 0;
+}
+
+#password {
+    margin: 10px 0 0 20px;
+    width: 20%;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+    font-family: sans-serif;
+}
+
+#confirma {
+    margin: 10px 0 0 50px;
+    font-size: 8px;
+    color: #ffffff;
+}
+
+#conf {
+    margin: 10px 0 0 20px;
+    width: 36%;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+    font-family: sans-serif;
+}
+
+#cadastrar {
+    margin: 20px 0 0 340px;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 0;
+    background-color: #55AF7D;
+    color: #ffffff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#cadastrar:hover {
+    background-color: #247548;
+    transition: 0.2s;
+}
+
+
+#fundo1 {
+    margin: -500px 0 0 -150px;
+    width: 500px;
+    opacity: 35%;
+    border-radius: 1000px;
+}
+
+#fundo2 {
+    margin: -770px 0 0 900px;
+    width: 300px;
+    opacity: 10%;
+    border-radius: 1000px;
+    position: absolute;
+}
+
+#fundo3 {
+    margin: -230px 0 0 1200px;
+    width: 300px;
+    opacity: 20%;
+    border-radius: 1000px;
+}

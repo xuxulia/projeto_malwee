@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Relatório</title>
+    <link rel="stylesheet" href="./consultarRelatorio.css">
+</head>
+    <body>
+        <header>
+            <div id = "cabecalho">
+                <img id = "grupo" src = "https://grupomalwee.com.br/wp-content/themes/grupo-malwee-theme/static/images/brands/logo-grupo-malwee.png" alt="Logo Grupo Malwee">
+                <a href="/telaLogin.html" ><button style="margin: -50px 0 0 1050px; font-size: 18px; height: 40px; width: 60px; border-radius: 5px; font-family: sans-serif; color: #ffffff; border: none; background-color: #55af7d; ">Sair↲</button></a>
+                </div>
+        </header>
+            
+        <div id="titulo">
+            <h2>Consultar Relatórios</h2>
+        </div>
+        <a href="/"><button style="width: 80px; height: 60px; background-color: #55af7d; color: #ffffff; border: none; border-radius: 7px; font-size: 40px; margin: 0 0 0 20px; cursor: pointer;">🢀</button></a>
+        <div id="card">
+            <div id= "procurar">
+                <input id = 'search' type="text">
+                <img src="./assets/relatorio.png" alt="">
+                <input id="lista" type="text" placeholder="Pesquisar por..." list="faixa">
+                <datalist id="faixa">
+                    <option value="Data"></option>
+                    <option value="Tecido"></option>
+                    <option value="Aviamento"></option>
+                </datalist>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Quantidade</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                        <th>Tecido</th>
+                        <th>Aviamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <th:block th:each="material : ${materiais}">
+                        <tr>
+                            <td th:text="${material.id}"></td>
+                            <td th:text="${material.quantidade}"></td>
+                            <td th:text="${material.valor}"></td>
+                            <td th:text="${material.descricao}"></td>
+                            <td th:text="${material.tecido}"></td>
+                            <td th:text="${material.aviamento}"></td>
+                        </tr>
+                    </th:block>
+                </tbody>
+            </table>
+        </div>
+        <footer>
+        </footer>
+    </body>
+</html>

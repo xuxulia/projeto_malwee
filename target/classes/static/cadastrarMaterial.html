@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Material</title>
+    <link rel="stylesheet" href="./stylesCadastrarMaterial.css">
+</head>
+
+<body>
+    <header>
+        <div id="cabecalho">
+            <img id="grupo"
+                src="https://grupomalwee.com.br/wp-content/themes/grupo-malwee-theme/static/images/brands/logo-grupo-malwee.png"
+                alt="Logo Grupo Malwee">
+            <a href="/telaLogin.html"><button
+                    style="margin: -50px 0 0 1050px; font-size: 18px; height: 40px; width: 60px; border-radius: 5px; font-family: sans-serif; color: #ffffff; border: none; background-color: #005BD7; ">Sair↲</button></a>
+        </div>
+    </header>
+    <div id="titulo">
+        <h2>Cadastrar Material</h2>
+    </div>
+    <a href="/materiaisMenu.html"><button
+            style="width: 80px; height: 60px; background-color: #005BD7; color: #ffffff; border: none; border-radius: 7px; font-size: 40px; margin: 0 0 0 20px; cursor: pointer;">🢀</button></a>
+    <form method="post" action="/materiais/cadastrar">
+        <div id="card">
+            <div id="pilha">
+                <div id="quantidade">
+                    <h2>Quantidade</h2>
+                    <div id="qtd">
+                        <input required name="quantidade" type="text">
+                    </div>
+                </div>
+
+                <div id="valor">
+                    <h2>Valor</h2>
+                    <div id="preco">
+                        <input required name="valor" type="text">
+                    </div>
+                </div>
+            </div>
+            <div id="descricao">
+                <h2>Descrição:</h2>
+                <div id="box">
+                    <input required name="descricao" type="text">
+                </div>
+            </div>
+
+            <div id="tecido">
+                <h2>Tecido</h2>
+                <input name="tecido" type="checkbox" id="tec">
+            </div>
+
+
+            <div id="aviamento">
+                <h2>Aviamento</h2>
+                <input name="aviamento" type="checkbox" id="av">
+            </div>
+
+        </div>
+
+        <a href="./menu.html"><button type="submit" id="cadastrar">
+                Cadastrar
+            </button></a>
+    </form>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

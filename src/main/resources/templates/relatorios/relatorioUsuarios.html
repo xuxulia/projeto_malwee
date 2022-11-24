@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Relatório</title>
+    <link rel="stylesheet" href="./consultarRelatorio.css">
+</head>
+    <body>
+        <header>
+            <div id = "cabecalho">
+                <img id = "grupo" src = "https://grupomalwee.com.br/wp-content/themes/grupo-malwee-theme/static/images/brands/logo-grupo-malwee.png" alt="Logo Grupo Malwee">
+                <a href="/telaLogin.html" ><button style="margin: -50px 0 0 1050px; font-size: 18px; height: 40px; width: 60px; border-radius: 5px; font-family: sans-serif; color: #ffffff; border: none; background-color: #55af7d; ">Sair↲</button></a>
+                </div>
+        </header>
+            
+        <div id="titulo">
+            <h2>Consultar Relatório de Usuários</h2>
+        </div>
+        <a href="/relatoriosMenu.html"><button style="width: 80px; height: 60px; background-color: #55af7d; color: #ffffff; border: none; border-radius: 7px; font-size: 40px; margin: 0 0 0 20px; cursor: pointer;">🢀</button></a>
+        <div id="card">
+            <div id= "procurar">
+                <input id = 'search' type="text">
+                <img src="./assets/relatorio.png" alt="">
+                <input id="lista" type="text" placeholder="Pesquisar por..." list="faixa">
+                <datalist id="faixa">
+                    <option value="Data"></option>
+                    <option value="Tecido"></option>
+                    <option value="Aviamento"></option>
+                </datalist>
+            </div>
+            <table style="font-family: sans-serif; color: #ffffff;">
+                <thead>
+                    <tr style="font-size: 18px;">
+                        <th><a style="margin-left: 30px;"></a></th>
+                        <th><a style="margin: 50px 40px 0 0;">|Id</a></th>
+                        <th><a style="margin: 50px 150px 0 0;">|Nome</a></th>
+                        <th><a style="margin: 50px 40px 0 0;">|Data Nasc</a></th>
+                        <th><a style="margin: 50px 60px 0 0;">|CPF</a></th>
+                        <th><a style="margin: 50px 240px 0 0;">|Email</a></th>
+                        <th><a style="margin: 50px 40px 0 -53px">|Criado em</a></th>
+                        <th><a style="margin: 50px 40px 0 -13px;">|Modificado em</a></th>
+                    </tr>
+                </thead>
+                <hr>
+                <tbody>
+                    <th:block th:each="usuario : ${usuarios}">
+                        <tr style="font-size: 16px;">
+                            <td> </td>
+                            <td th:text="'|' + ${usuario.id}"></td>
+                            <td th:text="'|' + ${usuario.nome}"></td>
+                            <td th:text="'|' + ${usuario.dataNasc}"></td>
+                            <td th:text="'|' + ${usuario.cpf}"></td>
+                            <td th:text="'|' + ${usuario.email}"></td>
+                            <td th:text="'|' + ${usuario.created}"></td>
+                            <td th:text="'|' + ${usuario.updated}"></td>
+                        </tr>
+                    </th:block>
+                </tbody>
+            </table>
+        </div>
+        <footer>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+}
+
+section div:first-child {
+    background-color: #906BFF;
+    height: 120px;
+    position: relative;
+    border-radius: 0 0 30px 30px;
+  }
+  section div:last-child {
+    background-color: #B79EFF;
+    height: 100px;
+    position: relative;
+    margin-top: -120px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  #grupo {
+    width: 300px;
+    margin: 25px 0 0 25px;
+  }
+
+  #user {
+    margin: 0 0 -6px 1000px;
+    width: 60px;
+  }
+
+  #nome {
+    font-size: 18px;
+    color: #ffffff;
+    font-family: sans-serif;
+    margin: -37px 0 0 1390px;
+    font-weight: lighter;
+  }
+
+  #user:hover, #nome:hover, #relatorios:hover, #materiais:hover {
+    cursor: pointer;
+  }
+
+  #blocos {
+    display: flex;
+  }
+
+  #relatorios {
+    background-color: #55AF7D;
+    width: 400px;
+    height: 250px;
+    border-radius: 30px;
+    margin: 230px 0 0 250px;
+    box-shadow: -10px 15px 0 #339E63;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  #relat {
+    color: #ffffff;
+    font-size: 35px;
+    letter-spacing: 5px;
+    font-family: sans-serif;
+    margin: 100px 0 0 30px;
+  }
+
+  #relatcria {
+    color: #ffffff;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-family: sans-serif;
+    margin: 10px 0 0 30px;
+  }
+
+  #papel {
+    width: 100px;
+    margin: -90px 0 0 270px;
+  }
+
+  #materiais {
+    background-color: #2273E1;
+    width: 400px;
+    height: 250px;
+    border-radius: 30px;
+    margin: 230px 0 0 260px;
+    box-shadow: -10px 15px 0 #005BD7;
+  }
+
+  #mater {
+    color: #ffffff;
+    font-size: 35px;
+    letter-spacing: 5px;
+    font-family: sans-serif;
+    margin: 100px 0 0 30px;
+  }
+
+  #matercria {
+    color: #ffffff;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-family: sans-serif;
+    margin: 10px 0 0 30px;
+    width: 200px;
+  }

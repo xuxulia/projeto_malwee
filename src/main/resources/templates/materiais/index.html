@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Material</title>
+    <link rel="stylesheet" href="./consultarMaterial.css">
+</head>
+<body>
+    <header>
+           <div id = "cabecalho">
+               <img id = "grupo" src = "https://grupomalwee.com.br/wp-content/themes/grupo-malwee-theme/static/images/brands/logo-grupo-malwee.png" alt="Logo Grupo Malwee">
+               <a href="/telaLogin.html" ><button style="margin: -50px 0 0 1050px; font-size: 18px; height: 40px; width: 60px; border-radius: 5px; font-family: sans-serif; color: #ffffff; border: none; background-color: #005BD7; ">Sair↲</button></a>
+            </div>
+    </header>
+    <div id="titulo">
+        <h2>Consultar Material</h2>
+    </div>
+    <a href="/materiaisMenu.html"><button style="width: 80px; height: 60px; background-color: #005BD7; color: #ffffff; border: none; border-radius: 7px; font-size: 40px; margin: 0 0 0 20px; cursor: pointer;">🢀</button></a>
+    <div id="card">
+        <div id= "procurar">
+            <form method="post" action="/procurar">
+                <input style="border-radius: 5px;" name="id" id="search" type="text">
+                <button style="margin-top: 10px; cursor: pointer; border: none; background-color: #2273E1;"><img style="border-radius: 5px; margin: 0 0 -10px 0;" src="./images/proc.png" alt=""></button>
+            </form>
+            <input id="lista" type="text" placeholder="Pesquisar por..." list="faixa">
+            <datalist id="faixa">
+              <option value="Data"></option>
+              <option value="ID"></option>
+            </datalist>
+        </div>
+        <div>
+            <table style="font-family: sans-serif; color: #ffffff;">
+                <thead>
+                    <tr style="font-size: 18px;">
+                        <th><a style="margin-left: 30px;"></a></th>
+                        <th><a style="margin: 50px 40px 0 0;">|Id</a></th>
+                        <th><a style="margin: 50px 40px 0 0;">|Quantidade</a></th>
+                        <th><a style="margin: 50px 40px 0 0;">|Valor</a></th>
+                        <th><a style="margin: 50px 40px 0 0;">|Descrição</a></th>
+                        <th><a style="margin: 50px 40px 0 0;">|Tecido</a></th>
+                        <th><a style="margin: 50px 40px 0 0;">|Aviamento</a></th>
+                    </tr>
+                </thead>
+                <hr>
+                <tbody>
+                    <th:block th:each="material : ${materiais}">
+                        <tr style="font-size: 16px;">
+                            <td> </td>
+                            <td th:text="'|' + ${material.id}"></td>
+                            <td th:text="'|' + ${material.quantidade}"></td>
+                            <td th:text="'|' + ${material.valor}"></td>
+                            <td th:text="'|' + ${material.descricao}"></td>
+                            <td th:text="'|' + ${material.tecido}"></td>
+                            <td th:text="'|' + ${material.aviamento}"></td>
+                            <td ><a th:href="@{'/materiais/' + ${material.id}}"><button style="font-weight: bold; height: 30px; cursor: pointer; color: #ffffff; border: none; border-radius: 5px; background-color: gold; margin-left: 20px;">Modificar</button></a></td>
+                            <td ><button style="font-weight: bold; height: 30px; cursor: pointer; color: #ffffff; border: none; border-radius: 5px; background-color: red; margin-left: 20px;" th:onclick="'if(confirm(\'Confirmar a exclusão do material?\')) {window.location.href = \'' + @{/materiais/{id}(id=${material.id})} + '/excluir\' } '">Excluir</button></td>
+                        </tr>
+                    </th:block>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>

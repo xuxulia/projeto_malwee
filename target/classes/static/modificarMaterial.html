@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Material</title>
+    <link rel="stylesheet" href="./modificarMaterial.css">
+</head>
+<body>
+    <header>
+           <div id = "cabecalho">
+               <img id = "grupo" src = "https://grupomalwee.com.br/wp-content/themes/grupo-malwee-theme/static/images/brands/logo-grupo-malwee.png" alt="Logo Grupo Malwee">
+               <a href="/telaLogin.html" ><button style="margin: -50px 0 0 1050px; font-size: 18px; height: 40px; width: 60px; border-radius: 5px; font-family: sans-serif; color: #ffffff; border: none; background-color: #005BD7; ">Sair↲</button></a>
+            </div>
+    </header>
+        
+    <div id="titulo">
+        <h2>Modificar Material</h2>
+    </div>
+
+    <div id="card">
+        <div id= "procurar">
+            <input type="text">
+            <a href="./modificarMaterial2.html"><img src="./images/proc.png" alt=""></a>
+        </div>
+        <table>
+            <thead>
+                <tr id="tr">
+                    <th>Id</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                    <th>Descrição</th>
+                    <th>Tecido</th>
+                    <th>Aviamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <th:block th:each="material : ${materiais}">
+                    <tr>
+                        <td th:text="${material.id}"></td>
+                        <td th:text="${material.quantidade}"></td>
+                        <td th:text="${material.valor}"></td>
+                        <td th:text="${material.descricao}"></td>
+                        <td th:text="${material.tecido}"></td>
+                        <td th:text="${material.aviamento}"></td>
+                        <button>Modificar</button>
+                        <td><button th:onclick="'window.location.href = \'' + @{/materiais/{id}(id=${material.id})} + '/excluir\''">Excluir</button></td>
+                    </tr>
+                </th:block>
+            </tbody>
+        </table>
+    </div>
+    
+    <footer>
+
+    </footer>
+</body>
+</html>
